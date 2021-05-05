@@ -1,0 +1,24 @@
+{
+  "name": "bcrypt-bundle-issue",
+  "version": "1.0.0",
+  "description": "Show an issue with bundling bcrypt",
+  "main": "index.js",
+  "scripts": {
+    "main": "npm run build && node --enable-source-maps esbuild.js",
+    "build": "esbuild index.js --platform=node --external:mock-aws-s3 --external:nock --external:aws-sdk --sourcemap --bundle --outfile=esbuild.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlgieringer/bcrypt-package-issue.git"
+  },
+  "author": "Carl Gieringer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlgieringer/bcrypt-package-issue/issues"
+  },
+  "homepage": "https://github.com/carlgieringer/bcrypt-package-issue#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "esbuild": "^0.11.18"
+  }
+}
